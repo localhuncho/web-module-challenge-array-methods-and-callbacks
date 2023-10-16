@@ -8,16 +8,45 @@ Practice accessing data by console.log-ing the following pieces of data note.
 💡 HINT: You may want to filter the data first 😉*/
 
 //(a) Home Team name for 2014 world cup final
-
+const finalMatchHome2014 = fifaData.find(item => item.Year === 2014 && item.Stage === 'Final');
+if (finalMatchHome2014) {
+    const homeTeam2014Final = finalMatchHome2014['Home Team Name'];
+    console.log( homeTeam2014Final);
+}
 //(b) Away Team name for 2014 world cup final
-
+const finalMatchAway2014 = fifaData.find(item => item.Year === 2014 && item.Stage === 'Final');
+if (finalMatchAway2014) {
+    const awayTeam2014Final = finalMatchAway2014['Away Team Name'];
+    console.log(awayTeam2014Final)
+}
 //(c) Home Team goals for 2014 world cup final
-
+if (finalMatchHome2014) {
+    const homeTeam2014FinalScore = finalMatchHome2014['Home Team Goals'];
+    console.log(homeTeam2014FinalScore);
+}
 //(d) Away Team goals for 2014 world cup final
-
+if (finalMatchAway2014) {
+    const AwayTeam2014FinalScore = finalMatchAway2014['Away Team Goals'];
+    console.log(AwayTeam2014FinalScore);
+}
 //(e) Winner of 2014 world cup final */
+if (finalMatchHome2014) {
+    const homeTeam2014FinalScore = finalMatchHome2014['Home Team Goals'];
+    console.log('Home Team Goals for 2014 World Cup Final:', homeTeam2014FinalScore);
+}
 
+if (finalMatchAway2014) {
+    const awayTeam2014FinalScore = finalMatchAway2014['Away Team Goals'];
+    console.log('Away Team Goals for 2014 World Cup Final:', awayTeam2014FinalScore);
+}
 
+if (awayTeam2014FinalScore > homeTeam2014FinalScore) {
+    console.log(awayTeam2014FinalScore);
+} else if (homeTeam2014FinalScore > awayTeam2014FinalScore) {
+    console.log(homeTeam2014FinalScore);
+} else {
+    console.log('It was a draw.');
+}
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
 1. Receive an array as a parameter that will take the fifa data as its argument
